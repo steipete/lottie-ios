@@ -2,8 +2,8 @@
 import PackageDescription
 
 let package = Package(
-    name: "Lottie",
-    platforms: [.iOS(.v9)],
+    name: "LottieMac",
+    platforms: [.macOS("10.10")],
     // platforms: [.iOS("9.0"), .macOS("10.10"), tvOS("9.0"), .watchOS("2.0")],
     products: [
         .library(name: "Lottie", targets: ["Lottie"])
@@ -12,7 +12,7 @@ let package = Package(
         .target(
             name: "Lottie",
             path: "lottie-swift/src",
-            exclude: ["Public/MacOS"]
+            exclude: ["Public/iOS"]
         )
     ]
 )
